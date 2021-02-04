@@ -6,14 +6,16 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('course', '0001_initial'),
-        ('users', '0002_auto_20210204_0823'),
+        ("course", "0001_initial"),
+        ("users", "0002_auto_20210204_0823"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='user',
-            name='group',
-            field=models.ManyToManyField(blank=True, related_name='user_group', to='course.Group'),
+            model_name="user",
+            name="group",
+            field=models.ManyToManyField(
+                blank=True, related_name="user_group", to="course.Group"
+            ),
         ),
     ]
